@@ -1,0 +1,198 @@
+.s-main {
+    padding-top: 9.1rem;
+    background-color: white;
+    z-index: 200;
+    height: 90rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+  .s-main .container {
+    height: auto;
+    display: flex;
+  }
+  .s-main .container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    max-width: 60rem;
+    padding-bottom: 20rem;
+  }
+  .s-main .container .left h1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .s-main .container .left h1::after {
+    content: "";
+    width: 60%;
+    height: 0.4rem;
+    background-color: var(--darker-brand-color);
+    border-radius: 4rem;
+    transition: 0.4s ease-out;
+  }
+  .s-main .container .left h2 {
+    padding-top: 1rem;
+  }
+  .s-main .container .left button {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 40px;
+  }
+  .s-main .right {
+    position: absolute;
+    width: 100%;
+    height: 70.7rem;
+  }
+  .s-main .right .mao {
+    position: absolute;
+    right: -10.9rem;
+    height: 1070px;
+    top: -25.4rem;
+  }
+  
+  .s-mid {
+    background: radial-gradient(circle, rgb(13, 22, 61) 0%, rgb(0, 0, 0) 100%);
+    height: 100%;
+  }
+  
+  .s-mid .container  {
+  
+  }
+  
+  .s-mid .container h2 {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  
+  }
+  .s-mid .container nav {
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    padding: 40px;
+  
+  }
+  .s-mid .container nav div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+    font-size: 15px;
+    font-weight: 600;
+    
+    
+  }
+  
+  .s-mid .container nav div a{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+  .s-mid .container nav div span{
+   
+    color: #fff;
+    
+  }
+  .s-mid .container nav img {
+    max-width: 64px;
+    transition: 0.5s ;
+    filter: invert(1);
+    cursor: pointer;
+  }
+  .s-mid .container nav img:hover {
+    transform: scale(1.1);
+    transition: 0.4s ;
+  }
+  
+  .s-app {
+    background-color: white;
+    height: 75rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 11;
+  }
+  .s-app .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .s-app .container .left {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    z-index: 2;
+  }
+  .s-app .container .left h1{
+    margin-bottom: 20px;
+  }
+  .s-app .container .left .app-download {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .s-app .container .left .app-download .botao a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .s-app .container .left .app-download .botao a .icon_apple {
+    filter: invert(100%);
+  }
+  .s-app .container .left .app-download .botao p {
+    color: var(--text-color-lightGray2);
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: start;
+  }
+  .s-app .container .left .app-download .botao span {
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .s-app .container .right {
+    position: relative;
+    width: 50rem;
+    width: 700px;
+    height: 100%;
+  }
+  .s-app .container .right .imgs {
+    background: hsl(319, 98%, 18%);
+    background: linear-gradient(45deg, hsl(319, 98%, 18%) 0%, hsl(268, 100%, 24%) 50%, hsl(222, 61%, 52%) 100%);
+    background: -webkit-linear-gradient(45deg, hsl(319, 98%, 18%) 0%, hsl(268, 100%, 24%) 50%, hsl(222, 61%, 52%) 100%);
+    border-radius: 73% 27% 68% 32%/32% 57% 43% 68%;
+    position: absolute;
+    height: 70rem;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .s-app .container .right .imgs .celular-img {
+    position: absolute;
+    height: 70rem;
+    top: 0;
+    right: 14rem;
+    animation: CellFloat 5s infinite ease-in-out;
+  }
+  .s-app .container .right .imgs .h-celular {
+    position: absolute;
+    height: 70rem;
+    right: 0;
+  }
+
+  @keyframes CellFloat {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(3rem);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }

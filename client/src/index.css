@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+}   
+
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+}
+@media (max-width: 1440px) {
+  .container {
+    max-width: 125rem;
+  }
+}
+
+:root {
+  --main-brand-color:	hsl(216, 61%, 52%);
+  --main-brand-color-opacified:	hsl(216, 61%, 52%,0.9);
+  --darker-brand-color:	hsl(216, 87%, 37%);
+  --text-color-lightGray:hsl(203, 9%, 48%) ;
+  --text-color-lightGray2:hsl(201, 13%, 78%) ;
+  --text-color-white: #E3ECF5;
+}
+
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+}
+@media (max-width: 1440px) {
+  .container {
+    max-width: 125rem;
+  }
+}
+
+p {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 1rem;
+  transition: 0.2s ease-in;
+}
+
+input {
+  border: 0px;
+  background: none;
+  outline: none;
+  color: #000;
+}
+
+.botao {
+  background-color: black;
+  color: aliceblue;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.botao:hover {
+  transition: 0.2s ease-out;
+  transform: scale(105%);
+}
+
+.icons {
+  height: 2.8rem;
+  width: 2.8rem;
+}
