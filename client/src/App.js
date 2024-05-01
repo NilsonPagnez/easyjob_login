@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from './Containers/Footer/Footer.jsx';
 import LoginForms from './Pages/Login/LoginForms.jsx';
 import Sobre from './Pages/Sobre/Sobre.jsx';
+import Servicos from './Pages/Servicos/Servicos.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Login' element={<LoginForms/>}/>
         <Route path='/Sobre' element={<Sobre/>}/>
+        <Route path='/Servicos' element={<Servicos/>}/>
 
       </Routes>
       <Footer/>

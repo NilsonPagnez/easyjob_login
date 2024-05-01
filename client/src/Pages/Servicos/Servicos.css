@@ -1,0 +1,46 @@
+.meio {
+  padding-bottom: 240px !important;
+
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.grid ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: 10px;
+}
+
+.grid ul li {
+  display: flex;
+  backdrop-filter: blur(1px) saturate(0%);
+  -webkit-backdrop-filter: blur(1px) saturate(0%);
+  background-color: rgba(17, 25, 40, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.grid ul li .content span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.imageDiv {
+  display: flex;
+  align-items: center;
+  max-width: 100px;
+  min-width: 100px;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-right: 1px solid;
+  margin-right: 15px;
+  padding-right: 15px;
+}
