@@ -37,7 +37,7 @@ function LoginForms() {
     })
 
     return (
-        <div className='container'>
+        <div className='container-login'>
             <h1>Login</h1>
 
             <Formik

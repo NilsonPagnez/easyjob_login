@@ -49,7 +49,11 @@ app.post("/login", (req, res)=>{
             bcrypt.compare(password,result[0].password,
             (err, result) =>{
                 if (result){
-                    res.send({msg:"Usuário logado com sucesso"})
+                    res.send(
+                        {
+                            msg:"Usuário logado com sucesso",
+                            data: req.body
+                        })
                 }else{
 
                 }
