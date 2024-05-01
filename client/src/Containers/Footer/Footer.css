@@ -1,0 +1,130 @@
+footer {
+    height: 40rem;
+    background: radial-gradient(circle, rgb(13, 22, 61) 0%, rgb(0, 0, 0) 100%);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+footer .container h3 {
+    color: aliceblue;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+footer .container ul {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .container span {
+    font-size: 1.8rem;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+footer .container .f-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .f-top .EJ_info {
+    max-width: 50rem;
+    border-right: 2px rgb(96, 104, 121) solid;
+    padding-right: 5rem;
+
+}
+
+footer .container .f-top .EJ_info .LogoNova {
+    max-height: 200px;
+    width: 50%;
+    display: block;
+}
+
+footer .container .f-top .EJ_info span {
+    display: block;
+    padding-bottom: 4rem;
+}
+
+footer .container .f-top .EJ_info .redes {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .f-top .EJ_info .redes img {
+    max-width: 4rem;
+    filter: brightness(100%);
+    transition: 0.2s;
+}
+
+footer .container .f-top .EJ_info .redes img:hover {
+    filter: brightness(120%);
+    transition: 0.3s;
+}
+
+footer .container .f-top .colaboradores span {
+    transition: 0.2s ease-in;
+}
+
+footer .container .f-top .colaboradores span:hover {
+    color: var(--text-color-lightGray);
+    transition: 0.2s;
+    text-decoration: underline;
+}
+
+footer .container .f-top .idealizadores ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .container .f-top .idealizadores ul li a:first-child {
+    padding-left: 1.5rem;
+}
+
+footer .container .f-top .idealizadores ul li a img {
+    width: 3rem;
+    transition: 0.2s;
+}
+
+footer .container .f-top .idealizadores ul li a img:hover {
+    filter: brightness(120%);
+    transition: 0.3s;
+}
+
+footer .container .f-bot {
+    display: flex;
+    justify-content: center;
+}
+
+footer .container .f-bot span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.colaboradores{
+    margin-top: 30px;
+    max-width: 400px;
+  }
+  
+  .colaboradores ul li a span{
+    font-weight: 300;
+  }
+  
+  .idealizadores  {
+    margin-top: 30px;
+  }
+  .idealizadores ul li span{
+    font-weight: 300;
+  }
+
+  .ID_Redes {
+    display: flex;
+    gap: 10px;
+  }

@@ -40,7 +40,11 @@ function Header() {
                             <button class="menu-buttons">CONTATO</button>
                         </Link>
 
-                        <button class="logar"> <a href="./"><img class="icons" src={Login} alt="login"></img> LogIn</a></button>
+                        <button class="logar">
+                            <Link to='/Login'>
+                                <img class="icons" src={Login} alt="login"></img>LogIn
+                            </Link>
+                        </button>
                     </ul>
                 </div>
             </div>
