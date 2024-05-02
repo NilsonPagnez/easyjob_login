@@ -6,6 +6,7 @@ import Footer from './Containers/Footer/Footer.jsx';
 import LoginForms from './Pages/Login/LoginForms.jsx';
 import Sobre from './Pages/Sobre/Sobre.jsx';
 import Servicos from './Pages/Servicos/Servicos.jsx';
+import Contato from './Pages/Contato/Contato.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/Login' element={<LoginForms/>}/>
         <Route path='/Sobre' element={<Sobre/>}/>
         <Route path='/Servicos' element={<Servicos/>}/>
+        <Route path='/Contato' element={<Contato/>}/>
 
       </Routes>
       <Footer/>

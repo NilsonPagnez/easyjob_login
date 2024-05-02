@@ -1,0 +1,88 @@
+.b-mid {
+    padding-bottom: 100px !important;
+    padding-top: 200px !important;
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto {
+    display: flex;
+    min-height: 70vh;
+}
+
+.texto ul {
+    text-align: justify;
+
+    max-width: 600px;
+}
+
+.texto ul li {
+    backdrop-filter: blur(1px) saturate(0%);
+    -webkit-backdrop-filter: blur(1px) saturate(0%);
+    background-color: rgba(17, 25, 40, 0.06);
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.texto ul li .content span {
+    font-weight: 700;
+    font-size: 20px;
+
+
+}
+
+.texto ul li .content p {
+    font-size: 15px;
+}
+
+.area-texto {
+    display: flex;
+    flex-direction: column;
+}
+.area-texto span{
+    font-size: 20px; 
+    font-weight: 700;
+}
+
+.area-texto input {
+    padding: 20px 10px;
+
+    border: 1px solid rgba(17, 25, 40, 1);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.area-texto textarea {
+    resize: none;
+    margin-top: 30px;
+    padding: 5px 10px;
+}
+
+.area-texto div {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.imageDiv {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+    min-width: 100px;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-right: 1px solid;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+
+.env {
+    padding: 10px 20px;
+    background-color: var(--main-orange-brand-color);
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+
+}

@@ -32,6 +32,7 @@ html {
   --main-brand-color:	hsl(216, 61%, 52%);
   --main-brand-color-opacified:	hsl(216, 61%, 52%,0.9);
   --darker-brand-color:	hsl(216, 87%, 37%);
+  --main-orange-brand-color:#ff5600;
   --text-color-lightGray:hsl(203, 9%, 48%) ;
   --text-color-lightGray2:hsl(201, 13%, 78%) ;
   --text-color-white: #E3ECF5;

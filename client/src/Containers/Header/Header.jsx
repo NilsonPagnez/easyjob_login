@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import Logo from '../../assets/LogoUpscale-fococlipping-standard.png'
+import Logo from '../../assets/MainLogoNova.png'
 import IconSearch from '../../assets/Icon_search.png'
 import IconMenu from '../../assets/Icon_menu.png'
 import Login from '../../assets/login.png'
@@ -12,7 +12,7 @@ function Header() {
             <div class="container">
                 <div class="header_content">
 
-                    <img src={Logo} alt="Logo"></img>
+                    <img src={Logo} className='Logo' alt="Logo"></img>
 
                     <div class="busca">
                         <input type="text" placeholder="Buscar Serviço"></input>
