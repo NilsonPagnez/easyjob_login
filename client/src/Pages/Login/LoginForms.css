@@ -1,15 +1,14 @@
-.container-login{
-    width: 300px;
+.container-usuario{
+    width:50%;
     height: max-content;
     margin:  200px auto;
-    background-color: #ebebeb;
     padding: 20px 15px;
     font-family: "Manrope", sans-serif;
-    box-shadow: 10px 11px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
+    display: flex;
+    gap: 2%;
 }
 
-.container-login h1{
+.container-usuario h1{
     margin: 0;
     text-align: left;
     margin-bottom: 10px;
@@ -18,19 +17,22 @@
 .login-form{
     padding: 5px;
 }
+.container-usuario input {
+    font-size: 1.7em;
+}
 
 .form-field{
     display: inline-block;
     margin-top: 20px;
     padding: 5px;
-    width: 100%;
+    width: 70%;
     background-color: white;
 }
 
 .form-error{
     display: block;
     color: rgb(237, 67, 75);
-    font-size: 0.9em;
+    font-size:1.5em;
     font-weight: 600;
 }
 
@@ -38,6 +40,32 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 5px 10px;
-    background-color: white;
+    background-color: #ff5600;
+    font-weight: 600;
+    color: #fff;
+    font-size: 2em;
+}
 
+.container-login, .container-cadastro{
+    width: 50%;
+    background-color: rgba(17, 25, 40, 0.06);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.26);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.container-login{
+    margin-left: 0.5%;
+}
+
+.h1-login, .h1-cadastro{
+    background-color: #ff5600;
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.h1-login h1, .h1-cadastro h1{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
 }

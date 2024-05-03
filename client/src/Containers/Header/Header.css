@@ -5,16 +5,16 @@ header {
   background: none;
   top: 0px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: #ff5500;
   -webkit-backdrop-filter: blur(1.5rem);
   backdrop-filter: blur(1.5rem);
-  border-bottom: 0.2rem solid rgba(111, 124, 132, 0.4);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.4);
 }
 
 .Logo {
   width: 15%;
-  -webkit-filter: drop-shadow(2px 2px 2px #222);
-  filter: drop-shadow(2px 2px 2px #222);
+  -webkit-filter: drop-shadow(7px 2px 2px #222);
+  filter: drop-shadow(7px 2px 2px #222);
 }
 
 header .clickTo_menu {
@@ -37,7 +37,7 @@ header .clickTo_menu button {
 }
 
 header .clickTo_menu button:hover {
-  color: var(--text-color-lightGray);
+  color: #fff;
   transition: 0.2s;
 }
 
@@ -52,7 +52,7 @@ header .clickTo_menu .logar a {
 }
 
 header .clickTo_menu .logar:hover {
-  filter: invert(50%) sepia(5%) saturate(934%) hue-rotate(159deg) brightness(95%) contrast(86%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 header .container {
@@ -71,13 +71,14 @@ header .container .header_content {
 
 header .container .header_content .busca {
   display: flex;
-  border: 0.1rem solid var(--text-color-lightGray);
+  border: 0.1rem solid #000;
   border-radius: 5rem;
   margin: 1rem 0;
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 30rem;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 header .container .header_content .busca input {
