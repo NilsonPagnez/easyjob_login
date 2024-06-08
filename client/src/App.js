@@ -7,6 +7,7 @@ import LoginForms from './Pages/Login/LoginForms.jsx';
 import Sobre from './Pages/Sobre/Sobre.jsx';
 import Servicos from './Pages/Servicos/Servicos.jsx';
 import Contato from './Pages/Contato/Contato.jsx';
+import User from './Pages/User/User';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/Sobre' element={<Sobre/>}/>
         <Route path='/Servicos' element={<Servicos/>}/>
         <Route path='/Contato' element={<Contato/>}/>
+        <Route path='/User' element={<User/>}/>
 
       </Routes>
       <Footer/>

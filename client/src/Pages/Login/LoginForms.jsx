@@ -3,24 +3,30 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from 'yup';
 import "./LoginForms.css";
 import Axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function LoginForms() {
 
-    const handleClickLogin = (values) =>{
-        Axios.post("http://localhost:3001/login",{
+    const navigate = useNavigate()
+
+    const handleClickLogin = (values) => {
+        Axios.post("http://localhost:3001/login", {
             email: values.email,
             password: values.password,
-        }).then((response)=>{
+        }).then((response) => {
             console.log(response);
             alert(response.data.msg);
+            navigate("/User")
+
 
         })
     }
     const handleClickRegister = (values) => {
-        Axios.post("http://localhost:3001/register",{
+        Axios.post("http://localhost:3001/register", {
+            nome: values.nome,
             email: values.email,
             password: values.password,
-        }).then((response)=>{
+        }).then((response) => {
             console.log(response);
             alert(response.data.msg);
 
@@ -40,7 +46,7 @@ function LoginForms() {
 
     return (
         <div className='container-usuario'>
-            
+
             <div className="container-cadastro">
                 <div className="h1-cadastro">
                     <h1>Cadastro</h1>
@@ -51,6 +57,10 @@ function LoginForms() {
                     validationSchema={validationRegister}
                 >
                     <Form className='register-form'>
+                        <div className='register-form-group'>
+                            <Field name='nome' className='form-field' placeholder='Nome' />
+                            <ErrorMessage component='span' name='nome' className='form-error' />
+                        </div>
                         <div className='register-form-group'>
                             <Field name='email' className='form-field' placeholder='Email' />
                             <ErrorMessage component='span' name='email' className='form-error' />
@@ -81,6 +91,7 @@ function LoginForms() {
                     validationSchema={validationLogin}
                 >
                     <Form className='login-form'>
+
                         <div className='login-form-group'>
                             <Field name='email' className='form-field' placeholder='Email' />
                             <ErrorMessage component='span' name='email' className='form-error' />

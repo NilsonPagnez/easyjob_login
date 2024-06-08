@@ -1,4 +1,4 @@
-//Arquivo responsável por livar o servidor local
+//Arquivo responsável por ligar o servidor local
 
 import app from "./index.js"
 

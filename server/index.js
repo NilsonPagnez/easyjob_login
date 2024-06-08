@@ -10,10 +10,12 @@ app.use(cors())
 
 
 app.post("/register", (req, res)=>{
+
+    const nome = req.body.nome
     const email = req.body.email
     const password = req.body.password
 
-    //VERIFICA SE O EMAIL JA ESTÁ LOGADO
+    //VERIFICA SE O EMAIL JA ESTÁ CADASTRADO
     db.query("SELECT * FROM users WHERE email = ?", [email], 
     (err, result) =>{
         if(err){
@@ -22,7 +24,7 @@ app.post("/register", (req, res)=>{
         if(result.length == 0){
             //bcrypt: criptografia de senha
             bcrypt.hash(password, saltRounds, (err, hash)=>{
-                db.query("INSERT INTO users (email, password) VALUES ( ?, ? )", [email, hash],
+                db.query("INSERT INTO users (nome, email, password) VALUES (?, ?, ? )", [nome,email, hash],
                 (err, response) =>{
                     if(err){
                         res.send(err);
@@ -47,7 +49,7 @@ app.post("/login", (req, res)=>{
         }
         if (result.length > 0){
             bcrypt.compare(password,result[0].password,
-            (err, result) =>{
+            (err, result) =>{''
                 if (result){
                     res.send(
                         {
