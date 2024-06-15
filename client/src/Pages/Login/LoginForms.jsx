@@ -16,10 +16,12 @@ function LoginForms() {
         }).then((response) => {
             console.log(response);
             alert(response.data.msg);
-            navigate("/User")
 
+            navigate("/User")
+            
 
         })
+        
     }
     const handleClickRegister = (values) => {
         Axios.post("http://localhost:3001/register", {
@@ -39,6 +41,7 @@ function LoginForms() {
     })
 
     const validationRegister = yup.object().shape({
+        nome: yup.string().min(3, "O nome deve ter ao menos 3 caracteres!").max(40, "O nome deve ter no máximo 40 caracteres!").required("este campo é obrigatório!"),
         email: yup.string().email("Não é um email!").required("este campo é obrigatório!"),
         password: yup.string().min(8, "A senha deve ter 8 caracteres!").required("este campo é obrigatório!"),
         confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas não são iguais!").min(8, "A senha deve ter 8 caracteres!").required("este campo é obrigatório!"),

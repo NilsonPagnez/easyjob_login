@@ -45,10 +45,7 @@ function User() {
 
                 </ul>
             </div>
-            <div className='userDescription'>
-                    <h2>Descrição do usuário</h2>
-                    <textarea name="description" id="" cols="30" rows="10"></textarea>
-            </div>
+
             <div className='contact'>
                 <h2>Contato</h2>
                 <ul>
@@ -82,6 +79,10 @@ function User() {
                         <input type="text" name="cidade" id="" />
                     </li>
                 </ul>
+            </div>
+            <div className='userDescription'>
+                    <h2>Descrição do usuário</h2>
+                    <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
         </section>
     )
