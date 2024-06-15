@@ -1,18 +1,21 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Header.css'
 import Logo from '../../assets/MainLogoNova.png'
 import IconSearch from '../../assets/Icon_search.png'
 import IconMenu from '../../assets/Icon_menu.png'
 import Login from '../../assets/login.png'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../Context/UserContext';
 
 function Header() {
+    const {authData } = useContext(AuthContext);
+
     return (
         <header >
             <div class="container">
                 <div class="header_content">
-
                     <img src={Logo} className='Logo' alt="Logo"></img>
+                    
 
                     <div class="busca">
                         <input type="text" placeholder="Buscar Serviço"></input>
@@ -41,9 +44,24 @@ function Header() {
                         </Link>
 
                         <button class="logar">
-                            <Link to='/Login'>
-                                <img class="icons" src={Login} alt="login"></img>LogIn
+                                {
+                                    authData ? (
+                            <Link to='/User'>
+                                <img class="icons" src={Login} alt="login"></img>
+                                        <div>
+                                            {authData.nome}
+                                        </div>
                             </Link>
+                                    ) : (
+                                        <Link to='/Login'>
+                                        <img class="icons" src={Login} alt="login"></img>
+                                                <div>
+                                                    LogIn
+                                                </div>
+                                    </Link>
+                                    )
+                                    
+                                }
                         </button>
                     </ul>
                 </div>

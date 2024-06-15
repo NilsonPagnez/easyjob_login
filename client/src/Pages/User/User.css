@@ -26,27 +26,12 @@
 
 }
 
-.userSection .nomeDiv span {
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    color: var(--main-orange-brand-color);
-    background-color: #f0ecec;
-    border-radius: 60px;
-    font-weight: bold;
-    cursor: pointer;
 
+.userSection .nomeDiv .btn_sair {
+    margin-left: 20px;
 }
 
-.userSection .nomeDiv span:hover {
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    color: #f0ecec;
-    background-color: var(--main-orange-brand-color);
-    border-radius: 60px;
-    font-weight: bold;
-    cursor: pointer;
 
-}
 
 .userSection .userMain {
     width: 100%;
@@ -106,4 +91,36 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+}
+
+.btnDiv{
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.btnDiv span, .btnDiv button{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: var(--main-orange-brand-color);
+    background-color: #f0ecec;
+    border-radius: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnDiv .btn_sair:hover {
+    background-color: var(--main-red-color);
+}
+
+.btnDiv  span:hover , .btnDiv button:hover{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: #f0ecec;
+    background-color: var(--main-orange-brand-color);
+    border-radius: 60px;
+    font-weight: bold;
+    cursor: pointer;
+
 }

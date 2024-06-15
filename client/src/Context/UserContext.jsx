@@ -1,31 +1,37 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-// Cria o contexto
-export const UserContext = createContext();
+const AuthContext = createContext();
 
-const UserProvider = ({ children }) => {
-    const [data, setData] = useState(null);
+const AuthProvider = ({ children }) => {
+    const [authData, setAuthData] = useState(null);
 
+    // Função para armazenar dados de login
+    const login = (data) => {
+        setAuthData(data);
+        // Armazene os dados no localStorage para persistência
+        localStorage.setItem('authData', JSON.stringify(data));
+    };
+
+    // Função para logout
+    const logout = () => {
+        setAuthData(null);
+        localStorage.removeItem('authData');
+        window.alert("logout")
+    };
+
+    // Carregar dados de autenticação do localStorage ao montar o componente
     useEffect(() => {
-        // Função para buscar dados da API
-        const fetchData = async () => {
-            try {
-                const response = await fetch('URL_DA_SUA_API');
-                const result = await response.json();
-                setData(result);
-            } catch (error) {
-                console.error('Erro ao buscar dados da API', error);
-            }
-        };
-
-        fetchData();
+        const storedAuthData = localStorage.getItem('authData');
+        if (storedAuthData) {
+            setAuthData(JSON.parse(storedAuthData));
+        }
     }, []);
 
     return (
-        <UserProvider.Provider value={{ data }}>
+        <AuthContext.Provider value={{ authData, login, logout }}>
             {children}
-        </UserProvider.Provider>
+        </AuthContext.Provider>
     );
 };
 
-export default UserProvider;
+export { AuthContext, AuthProvider };

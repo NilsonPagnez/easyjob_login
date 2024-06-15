@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from 'yup';
 import "./LoginForms.css";
 import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Context/UserContext';
 
 function LoginForms() {
+    const { authData, login } = useContext(AuthContext);
 
     const navigate = useNavigate()
 
@@ -14,7 +16,9 @@ function LoginForms() {
             email: values.email,
             password: values.password,
         }).then((response) => {
-            console.log(response);
+            const data = response.data.data
+            login(data)
+            console.log(authData)
             alert(response.data.msg);
 
             navigate("/User")

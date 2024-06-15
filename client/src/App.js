@@ -8,22 +8,25 @@ import Sobre from './Pages/Sobre/Sobre.jsx';
 import Servicos from './Pages/Servicos/Servicos.jsx';
 import Contato from './Pages/Contato/Contato.jsx';
 import User from './Pages/User/User';
-
+import { AuthProvider } from './Context/UserContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Login' element={<LoginForms/>}/>
-        <Route path='/Sobre' element={<Sobre/>}/>
-        <Route path='/Servicos' element={<Servicos/>}/>
-        <Route path='/Contato' element={<Contato/>}/>
-        <Route path='/User' element={<User/>}/>
+      <AuthProvider> 
 
-      </Routes>
-      <Footer/>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Login' element={<LoginForms />} />
+          <Route path='/Sobre' element={<Sobre />} />
+          <Route path='/Servicos' element={<Servicos />} />
+          <Route path='/Contato' element={<Contato />} />
+          <Route path='/User' element={<User />} />
+
+        </Routes>
+        <Footer />
+      </AuthProvider>
     </BrowserRouter>
   );
 }
