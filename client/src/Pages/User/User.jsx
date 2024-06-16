@@ -5,6 +5,7 @@ import { AuthContext } from '../../Context/UserContext';
 import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Axios from 'axios';
+import * as yup from 'yup';
 
 
 function User() {
@@ -43,6 +44,13 @@ function User() {
             actions.setSubmitting(false); // Define que a submissão foi completada
         });
     };
+
+    const validationUpdate = yup.object().shape({
+        email_pessoal: yup.string().email("Não é um email!").required("este campo é obrigatório!"),
+        cpf: yup.string().min(11, "O CPF deve ter 11 caracteres!").max(11, "O CPF deve ter 11 caracteres!"),
+        confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas não são iguais!").min(8, "A senha deve ter 8 caracteres!").required("este campo é obrigatório!"),
+    })
+
     return (
         <>
             {
@@ -62,8 +70,7 @@ function User() {
                             descricao: authData.descricao || ''
                         }}
                         onSubmit={handleUpdate}
-                        validateOnChange={false}
-                        validateOnBlur={false}
+                        validationSchema={validationUpdate}
                         enableReinitialize={true}
                     >
                         {({ isSubmitting }) => (
@@ -94,15 +101,21 @@ function User() {
                                         <ul>
                                             <li>
                                                 <h3>CPF</h3>
-                                                <Field type="text" name="cpf" />
+                                                <Field  maxlength="11" type="text" name="cpf" />
+                                                <ErrorMessage component='span' name='cpf' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Situação</h3>
-                                                <Field type="text" name="situation" />
+                                                <Field  maxlength="30" type="text" name="situation" />
+                                                <ErrorMessage component='span' name='situation' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Cargo</h3>
-                                                <Field type="text" name="cargo" />
+                                                <Field maxlength="40" type="text" name="cargo" />
+                                                <ErrorMessage component='span' name='cargo' className='form-error' />
+
                                             </li>
                                         </ul>
                                     </div>
@@ -111,11 +124,14 @@ function User() {
                                         <ul>
                                             <li>
                                                 <h3>Email Pessoal</h3>
-                                                <Field type="text" name="email_pessoal" />
+                                                <Field maxlength="40" type="text" name="email_pessoal" />
+                                                <ErrorMessage component='span' name='email_pessoal' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Telefone Comercial</h3>
-                                                <Field type="text" name="telefone" />
+                                                <Field maxlength="15"  type="text" name="telefone" />
+                                                <ErrorMessage component='span' name='telefone' className='form-error' />
                                             </li>
                                         </ul>
                                     </div>
@@ -124,25 +140,33 @@ function User() {
                                         <ul>
                                             <li>
                                                 <h3>CEP</h3>
-                                                <Field type="text" name="cep" />
+                                                <Field maxlength="9"  type="text" name="cep" />
+                                                <ErrorMessage component='span' name='cep' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Número</h3>
-                                                <Field type="text" name="endereco" />
+                                                <Field maxlength="5" type="text" name="endereco" />
+                                                <ErrorMessage component='span' name='endereco' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Estado</h3>
                                                 <Field type="text" name="estado" />
+                                                <ErrorMessage maxlength="20" component='span' name='estado' className='form-error' />
+
                                             </li>
                                             <li>
                                                 <h3>Cidade</h3>
-                                                <Field type="text" name="cidade" />
+                                                <Field maxlength="40"  type="text" name="cidade" />
+                                                <ErrorMessage component='span' name='cidade' className='form-error' />
+
                                             </li>
                                         </ul>
                                     </div>
                                     <div className='userDescription'>
                                         <h2>Descrição do usuário</h2>
-                                        <Field as="textarea" name="descricao" />
+                                        <Field  as="textarea" name="descricao" />
                                     </div>
                                     <div className={'btnDiv'}>
                                         <button type="submit" disabled={isSubmitting}>
